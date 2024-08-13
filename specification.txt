@@ -1,0 +1,53 @@
+Scene Index Timecode (SIT) Format Specification
+
+File Extension: .sit
+
+Format:
+
+[Sequence Number]
+[Start Timecode] --> [End Timecode]
+[Scene Type]
+
+Each entry is separated by a blank line.
+
+Scene Types:
+- INTRO: Opening credits or intro sequence
+- RECAP: "Previously on..." segment
+- CONTENT: Main content of the episode
+- CREDITS: Ending credits
+- PREVIEW: "Next time on..." segment
+- AD: Mid-roll advertisement slot
+- TITLE: Title card
+- COLD_OPEN: Scene before the intro
+
+Timecode format: HH:MM:SS,mmm (Hours:Minutes:Seconds,Milliseconds)
+
+Example:
+
+1
+00:00:00,000 --> 00:01:30,500
+RECAP
+
+2
+00:01:30,501 --> 00:02:45,750
+INTRO
+
+3
+00:02:45,751 --> 00:41:30,000
+CONTENT
+
+4
+00:41:30,001 --> 00:42:15,000
+CREDITS
+
+5
+00:42:15,001 --> 00:43:00,000
+PREVIEW
+
+File Identification:
+Use either video file hash or IMDb ID as the filename:
+
+8e245d9679d31e12.sit
+or
+tt0944947s01e01.sit (for TV series)
+tt0111161.sit (for movies)
